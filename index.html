@@ -72,7 +72,7 @@ footer{background:var(--red);color:#fff;padding:40px 0 20px}.fg{display:grid;gri
 .nv h2,.nv h3,.vis p,.nv .vals i,.topics b{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600}
 .nvtop{display:grid;grid-template-columns:200px 1fr;gap:44px;align-items:center}.nvlogo{background:#fff;border:1px solid #e8dcc6;border-radius:6px;padding:24px}.nvlogo img{display:block;width:100%}
 .nk,.vis span{font:900 12px Lato,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--gd)}.nv h2{font-size:clamp(38px,5vw,58px);color:var(--fr);margin:6px 0 10px}.nvtop p{margin:0;font-size:18px;max-width:690px;color:#4e4640}.nvtop p.nm{margin-top:10px;font-size:16px}.nm b{color:var(--fr)}
-.vis{margin:42px 0 0;padding:34px 26px;text-align:center;background:var(--fr);color:#fff;border-radius:6px}.vis span{color:#e0c27a}.vis p{margin:8px auto 0;font-size:clamp(30px,4vw,44px);line-height:1.15}
+.vis{margin:42px 0 0;padding:34px 26px;text-align:center;background:var(--fr);color:#fff;border-radius:6px}.vis span{color:#e0c27a}.vis p{margin:10px auto 0;max-width:820px;font-size:clamp(21px,2.5vw,29px);line-height:1.35}
 .nh{font-size:clamp(30px,3.6vw,40px);color:var(--fr);margin:48px 0 18px}
 .topics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#ffffff2e;border:1px solid var(--wn);border-radius:6px;overflow:hidden;counter-reset:t}
 .topics div{counter-increment:t;background:var(--wn);color:#fff;padding:26px 28px;transition:background .2s}.topics div:hover{background:#6e1a2a}
@@ -96,15 +96,15 @@ footer{background:var(--red);color:#fff;padding:40px 0 20px}.fg{display:grid;gri
 .p1 .blk{min-height:178px}.p2 .blk{min-height:132px}.p3 .blk{min-height:96px}
 .blk .rk{font:400 40px/1 "Berkshire Swash",serif;color:var(--yellow);text-shadow:0 3px 0 #5a0d0d}
 .p1 .blk .rk{font-size:54px}
-.blk h3{font-size:20px;margin-top:4px;overflow-wrap:anywhere}
+.blk h3{font-size:clamp(26px,3.2vw,36px);line-height:1.08;margin-top:6px;color:#f6cf4a;text-shadow:0 2px 0 #5a0d0d,0 4px 12px #0006;overflow-wrap:anywhere}
 .blk small{font-weight:700;opacity:.9}
-.pod.open .blk h3{font-size:17px}
+.pod.open .blk h3{font-size:24px}
 .spark{position:absolute;z-index:2;color:var(--yellow);font-size:20px;line-height:1;animation:tw 1.8s ease-in-out infinite;pointer-events:none}
 .spark.s1{top:2%;left:2%}.spark.s2{top:16%;right:0;animation-delay:.6s}.spark.s3{top:38%;left:-4%;animation-delay:1.2s}
 @keyframes bob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-7px) rotate(-1.5deg)}}
 @keyframes tw{0%,100%{opacity:.2;transform:scale(.7)}50%{opacity:1;transform:scale(1.15)}}
 @media (prefers-reduced-motion:reduce){.pod .char,.spark{animation:none}}
-@media (max-width:640px){.pods{gap:6px}.blk{padding:9px 4px}.p1 .blk{min-height:138px}.p2 .blk{min-height:104px}.p3 .blk{min-height:76px}.blk .rk{font-size:30px}.p1 .blk .rk{font-size:40px}.blk h3,.pod.open .blk h3{font-size:14px}.blk small{font-size:11px}.spark{font-size:15px}}
+@media (max-width:640px){.pods{gap:6px}.blk{padding:9px 4px}.p1 .blk{min-height:138px}.p2 .blk{min-height:104px}.p3 .blk{min-height:76px}.blk .rk{font-size:30px}.p1 .blk .rk{font-size:40px}.blk h3{font-size:19px}.pod.open .blk h3{font-size:14px}.blk small{font-size:11px}.spark{font-size:15px}}
 </style></head><body>
 <header class="hero" id="top"><div class="corner a"></div><div class="corner b"></div><div class="snow"></div>
 <div class="wrap"><nav class="nav"><a class="brand" href="#top"><img data-i="nova" alt="NOVA"><span>Christmas MEGA Giveaway</span></a><a class="l" href="#prizes">Prizes</a><a class="l" href="#leaderboard">Leaderboard</a><a class="l" href="#nova">About NOVA</a><a class="l" href="#how">How It Works</a></nav>
@@ -167,7 +167,7 @@ footer{background:var(--red);color:#fff;padding:40px 0 20px}.fg{display:grid;gri
 <div class="wrap sched" id="draws"></div>
 <section class="lb" id="leaderboard" style="margin-top:56px"><div class="wrap"><h2 class="ttl">Who's Bringing the Most Cheer?</h2><p class="lead">Live rankings. The top three on 23 Dec get ×20, ×15 and ×10 for the grand prize draws.</p><div class="pods" id="podium"></div><div class="bg"><div class="box" id="list"></div><div class="box"><h3>Find Your Name</h3><input id="q" type="search" placeholder="Type your first name" aria-label="Find your name" autocomplete="off"><div id="res"><p class="note">See your entries, rank and next goal.</p></div></div></div><p class="note"><span id="updated">Connecting…</span> Chances are estimates and change as entries come in.</p></div></section>
 <section class="nv" id="nova"><div class="wrap"><div class="nvtop"><div class="nvlogo"><img data-i="nova" alt="NOVA logo"></div><div><div class="nk">Who We Are</div><h2>Make What You Have Work Harder</h2><p>NOVA is a financial advisory team. We show you where you stand, then make what you already have work harder before suggesting anything new.</p><p class="nm"><b>Why NOVA?</b> It means "new" in Latin. In the sky, a nova is a star that suddenly shines brighter. We're a young team and a new star rising, here to build something that lasts.</p></div></div>
-<div class="vis"><span>Our Vision</span><p>Your first call about money.</p></div>
+<div class="vis"><span>Our Vision</span><p>Team NOVA walks with Singapore families through every life stage, from a first salary to retirement and legacy. We give clear advice, recommend only what you need, and stay for the long run.</p></div>
 <h3 class="nh">Have a Money Question? Start With Us</h3><div class="topics"><div><b>Savings and Investments</b><p>Get a clear view of how your money is working.</p></div><div><b>Policies and Protection</b><p>Spot gaps and overlaps in what you already have.</p></div><div><b>Retirement and CPF</b><p>Know where you stand and what your plan needs.</p></div><div><b>Parents and Children</b><p>Plan for yourself while caring for your family.</p></div><div><b>Graduates and Young Families</b><p>Start right, without overbuying.</p></div><div><b>Anything Else on Finances</b><p>If it's about money, it's a good place to start.</p></div></div>
 <h3 class="nh">What We Stand For</h3><div class="vals"><div><i>N</i><b>Needs Before Products</b><p>We understand you first, and we'll say so when you don't need anything new.</p></div><div><i>O</i><b>Own It</b><p>We take full ownership of your plan, from our first chat to every review after.</p></div><div><i>V</i><b>Value Every Relationship</b><p>Clients and their families, for the long game.</p></div><div><i>A</i><b>Always Growing</b><p>Better each month in skills, knowledge and confidence.</p></div></div></div></section>
 <section id="how"><div class="wrap"><h2 class="ttl">How It Works</h2><p class="lead">Three simple steps to join the fun.</p><div class="how"><div class="h"><img data-i="g5" alt="Festive ornaments"><div><h3>1. Do Your Review</h3><p>Complete your End of Year Review 2026 for 1 entry.</p></div></div><div class="h"><img data-i="g3" alt="Wrapped gifts"><div><h3>2. Refer Someone New</h3><p>Earn 1 more entry each time someone you refer completes their review.</p></div></div><div class="h"><img data-i="hero" alt="Gifts on a Christmas tree"><div><h3>3. Climb to the Top</h3><p>Rank #1, #2 or #3 on 23 Dec for boosted grand prize chances.</p></div></div></div></div></section>
