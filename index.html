@@ -234,6 +234,15 @@ footer{background:var(--sparkle),linear-gradient(180deg,#3a0a12,#1c0509);box-sha
 #how{padding-bottom:40px}
 .tsec{padding:0 0 8px}.tsec .timer{margin-top:0}
 .tsec .tt p{max-width:420px}
+
+/* Highlighted grand prize headline */
+.phead .ttl{position:relative;display:inline-block;margin-top:12px;padding:16px 46px 18px;border-radius:20px;color:#fff8ea;font-size:clamp(28px,3.6vw,44px);background:var(--sparkle),linear-gradient(120deg,#7a1726,#3a0a12);box-shadow:0 0 0 3px #e2bd5a,0 0 0 7px #e2bd5a33,0 18px 36px #5a132055}
+.phead small{display:block}
+.phead .ttl::before,.phead .ttl::after{content:"✦";position:absolute;top:50%;transform:translateY(-50%);width:auto;height:auto;margin:0;background:none;font-size:18px;line-height:1;color:#e2bd5a;pointer-events:none}
+.phead .ttl::before{left:16px}.phead .ttl::after{display:block;right:16px}
+#upWorth{display:inline-block;margin-left:.15em;font-size:1.45em;line-height:1;vertical-align:-.08em;background:var(--gold);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 3px 0 #1c0509)}
+.phead .lead{margin-top:16px}
+@media (max-width:640px){.phead .ttl{padding:14px 26px 16px;font-size:26px}.phead .ttl::before,.phead .ttl::after{font-size:13px}.phead .ttl::before{left:9px}.phead .ttl::after{right:9px}#upWorth{display:block;margin:4px 0 0;font-size:2em}}
 </style></head><body>
 <header class="hero" id="top"><div class="corner a"></div><div class="corner b"></div><div class="snow"></div>
 <div class="wrap"><nav class="nav"><a class="brand" href="#top"><img data-i="nova" alt="NOVA"><span>Christmas MEGA Giveaway</span></a><a class="l" href="#prizes">Prizes</a><a class="l" href="#how">How It Works</a><a class="l" href="#leaderboard">Leaderboard</a><a class="l" href="#nova">About NOVA</a></nav>
