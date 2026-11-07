@@ -117,6 +117,56 @@ footer{background:var(--red);color:#fff;padding:40px 0 20px}.fg{display:grid;gri
 .up-imgs img:nth-child(2){z-index:2;width:50%;height:80%;left:26%;top:0;transform:rotate(-2deg)}
 .up-imgs img:nth-child(3){width:36%;height:58%;right:0;bottom:2%;transform:rotate(8deg)}
 @media (max-width:640px){.upsell{grid-template-columns:1fr;padding:20px 18px;gap:14px}.up-imgs{height:170px;order:-1}.upsell p{font-size:14px}}
+
+/* ---- Premium festive layer ---- */
+:root{--gold:linear-gradient(135deg,#8a6a1f 0%,#f7e08a 22%,#c9a03a 45%,#fff3b0 60%,#b8892a 80%,#f5d77a 100%);--silver:linear-gradient(135deg,#6f7782 0%,#eef1f5 28%,#a3abb6 52%,#fbfcfd 68%,#868e99 100%);--bronze:linear-gradient(135deg,#6e3f1c 0%,#eab07a 28%,#a5602b 52%,#f6c79a 68%,#7f4b22 100%)}
+.ttl::after{content:"";display:block;width:96px;height:4px;margin-top:12px;border-radius:4px;background:var(--gold)}
+.btn.y{background:var(--gold);background-size:220% 100%;color:#3b2a08;box-shadow:inset 0 1px 0 #fff9,0 6px 16px #b8892a55;transition:transform .15s,box-shadow .15s,background-position .6s}
+.btn.y:hover{background-position:100% 0}
+#prizes,.fp{background:#fffaf3 radial-gradient(#e9c76633 1.4px,transparent 1.8px) 0 0/28px 28px}
+.stage{background:#fff;box-shadow:0 0 0 2px #f1dfae,0 22px 40px #7c121222}
+.thumbs button.on{border-color:#d4ae4f}
+.card{background:#fff;border-color:#f3e6c4;box-shadow:0 10px 22px #7c121214;transition:transform .2s,box-shadow .2s,border-color .2s}
+.card:hover{border-color:#e2c066;box-shadow:0 20px 34px #7c121230}
+.card .val{background:var(--gold);color:#3b2a08;box-shadow:0 4px 10px #0003}
+.card small{color:#a5761f}
+.tier{background:var(--silver);color:#2b2f36;border-color:#fff}.tier span,.tier small{color:#2b2f36}
+.tier:nth-child(3){background:var(--bronze);color:#3a1f0b}.tier:nth-child(3) span,.tier:nth-child(3) small{color:#3a1f0b}
+.tier.t1{background:var(--gold);color:#3b2a08;border-color:#fff}
+.tier,.tier.t1{box-shadow:0 0 0 3px #e2c066,0 16px 30px #7c121233}
+.promo::after{content:"";position:absolute;inset:8px;border:1.5px solid #ffe7a3aa;border-radius:11px;pointer-events:none}
+.d.next{background:#fff7d9;border-color:#d4ae4f;box-shadow:0 10px 22px #b8892a33}
+.h{background:#fff;box-shadow:0 0 0 2px #f1dfae,0 14px 26px #7c12121a}
+footer{box-shadow:inset 0 6px 0 #d4ae4f}
+.timer{box-shadow:0 0 0 2px #fff3b0 inset,0 18px 34px #2b0a0a55}
+.upsell{box-shadow:0 0 0 2px #fff3b088 inset,0 18px 34px #7c121244}
+
+/* ---- Leaderboard as an awards stage ---- */
+.lb{position:relative;overflow:hidden;color:#fff;background:radial-gradient(1100px 520px at 50% -8%,#7a1726 0%,#3a0a12 55%,#1c0509 100%)}
+.lb::before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(200deg,transparent 40%,#ffe9a61f 48%,transparent 56%) 18% 0/60% 100% no-repeat,linear-gradient(160deg,transparent 40%,#ffe9a61f 48%,transparent 56%) 82% 0/60% 100% no-repeat,radial-gradient(#ffe7a355 1.2px,transparent 1.8px) 0 0/34px 34px}
+.lb .wrap{position:relative;z-index:1}
+.lb .ttl{background:var(--gold);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none}
+.lb>.wrap>.lead{color:#f3dcc4}.lb>.wrap>.note{color:#e7cbbb}
+.confetti{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.confetti i{position:absolute;top:-24px;width:9px;height:15px;border-radius:2px;opacity:.9;animation:conf linear infinite}
+.confetti i:nth-child(3n){width:7px;height:7px;border-radius:50%}
+@keyframes conf{0%{transform:translateY(0) rotate(0)}100%{transform:translateY(1250px) rotate(var(--r,540deg))}}
+.pods{position:relative;padding-bottom:18px}
+.pods::after{content:"";position:absolute;left:-4%;right:-4%;bottom:0;height:22px;border-radius:50%;background:radial-gradient(closest-side,#00000088,transparent);z-index:-1}
+.pod.p1::before{background:radial-gradient(closest-side,#ffe39a88,transparent)}
+.blk{position:relative;overflow:hidden;border-radius:12px 12px 4px 4px;color:#3b2a08;box-shadow:inset 0 8px 0 #ffffff55,inset 0 -6px 0 #0000001f,0 18px 30px #0008}
+.p1 .blk{background:var(--gold)}.p2 .blk{background:var(--silver);color:#272c33}.p3 .blk{background:var(--bronze);color:#2e1708}
+.blk::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,#ffffff8c,transparent);transform:skewX(-18deg);animation:shine 4.5s ease-in-out infinite}
+.p2 .blk::after{animation-delay:1.2s}.p3 .blk::after{animation-delay:2.4s}
+@keyframes shine{0%,55%{left:-60%}85%,100%{left:130%}}
+.blk .rk{color:inherit;text-shadow:0 2px 0 #ffffff99,0 -1px 0 #0000002e}
+.blk h3{color:inherit}.blk small{opacity:.85}
+.pod.open .blk{filter:saturate(.75) brightness(.95)}
+.lb .box{color:var(--ink);border-top:4px solid #d4ae4f;box-shadow:0 18px 34px #0006}
+.lb>.wrap>.lead{font-size:17px}
+.lb .row.top{background:linear-gradient(90deg,#fff2c2,#fffaf0)}
+.lb .row .g{background:var(--gold)}
+@media (prefers-reduced-motion:reduce){.confetti,.blk::after{display:none}}
 </style></head><body>
 <header class="hero" id="top"><div class="corner a"></div><div class="corner b"></div><div class="snow"></div>
 <div class="wrap"><nav class="nav"><a class="brand" href="#top"><img data-i="nova" alt="NOVA"><span>Christmas MEGA Giveaway</span></a><a class="l" href="#prizes">Prizes</a><a class="l" href="#leaderboard">Leaderboard</a><a class="l" href="#nova">About NOVA</a><a class="l" href="#how">How It Works</a></nav>
@@ -226,5 +276,6 @@ function stamp(){return new Date(DATA.updated).toLocaleTimeString('en-SG',{hour:
 function load(){if(!SITE.SCRIPT_URL){DATA={updated:new Date().toISOString(),participants:[],totals:{participants:0,entries:0,referrals:0,weighted:0}};$('updated').textContent='The leaderboard goes live soon.';render();return}fetch(SITE.SCRIPT_URL).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){if(!d.participants)throw 0;DATA=d;$('updated').textContent='Updated '+stamp()+'.';render()}).catch(function(){$('updated').textContent=DATA?'Could not refresh. Showing the numbers from '+stamp()+'.':'The leaderboard is taking a moment. Please try again shortly.'})}
 if(SITE.TERMS_URL){var a=el('a',null,'Read the full terms and conditions');a.href=SITE.TERMS_URL;$('tnc').appendChild(a)}
 $('q').addEventListener('input',function(){if(this.value.trim().length<2)$('res').innerHTML='<p class="note">See your entries, rank and next goal.</p>';else search()});
+(function(){var lb=$('leaderboard'),c=el('div','confetti'),cols=['#f4c93f','#ffffff','#e23a35','#62d26f','#f7e08a'];for(var i=0;i<34;i++){var b=el('i');b.style.left=(Math.random()*100)+'%';b.style.background=cols[i%cols.length];b.style.animationDuration=(7+Math.random()*7)+'s';b.style.animationDelay=(-Math.random()*14)+'s';b.style.setProperty('--r',(Math.random()>.5?'':'-')+(360+Math.random()*540|0)+'deg');c.appendChild(b)}lb.insertBefore(c,lb.firstChild)})();
 steps();tick();setInterval(tick,1000);load();setInterval(load,SITE.REFRESH_SECONDS*1000);setInterval(steps,60000);
 </script></body></html>
