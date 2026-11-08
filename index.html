@@ -93,7 +93,7 @@ footer{background:var(--red);color:#fff;padding:40px 0 20px}.fg{display:grid;gri
 .pod.open .char{filter:saturate(.8);opacity:.92}
 .pod.p1::before{content:"";position:absolute;left:-18%;right:-18%;top:-6%;height:62%;background:radial-gradient(closest-side,#f4c93f66,transparent);pointer-events:none}
 .blk{width:100%;display:flex;flex-direction:column;align-items:center;padding:12px 8px;border-radius:14px 14px 6px 6px;background:linear-gradient(180deg,#c9303a,var(--deep));box-shadow:inset 0 6px 0 #e4545b,0 0 0 4px var(--yellow),0 14px 26px #7c121244}
-.p1 .blk{min-height:178px}.p2 .blk{min-height:132px}.p3 .blk{min-height:96px}
+.p1 .blk{min-height:212px}.p2 .blk{min-height:162px}.p3 .blk{min-height:128px}
 .blk .rk{font:400 40px/1 "Berkshire Swash",serif;color:var(--yellow);text-shadow:0 3px 0 #5a0d0d}
 .p1 .blk .rk{font-size:54px}
 .blk h3{font-size:clamp(26px,3.2vw,36px);line-height:1.08;margin-top:6px;color:#f6cf4a;text-shadow:0 2px 0 #5a0d0d,0 4px 12px #0006;overflow-wrap:anywhere}
@@ -104,7 +104,7 @@ footer{background:var(--red);color:#fff;padding:40px 0 20px}.fg{display:grid;gri
 @keyframes bob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-7px) rotate(-1.5deg)}}
 @keyframes tw{0%,100%{opacity:.2;transform:scale(.7)}50%{opacity:1;transform:scale(1.15)}}
 @media (prefers-reduced-motion:reduce){.pod .char,.spark{animation:none}}
-@media (max-width:640px){.pods{gap:6px}.blk{padding:9px 4px}.p1 .blk{min-height:138px}.p2 .blk{min-height:104px}.p3 .blk{min-height:76px}.blk .rk{font-size:30px}.p1 .blk .rk{font-size:40px}.blk h3{font-size:19px}.pod.open .blk h3{font-size:14px}.blk small{font-size:11px}.spark{font-size:15px}}
+@media (max-width:640px){.pods{gap:6px}.blk{padding:9px 4px}.p1 .blk{min-height:172px}.p2 .blk{min-height:132px}.p3 .blk{min-height:106px}.blk .rk{font-size:30px}.p1 .blk .rk{font-size:40px}.blk h3{font-size:19px}.pod.open .blk h3{font-size:14px}.blk small{font-size:11px}.spark{font-size:15px}}
 
 .upsell{position:relative;z-index:3;margin-top:26px;display:grid;grid-template-columns:1.2fr 1fr;align-items:center;gap:24px;padding:28px 32px;border-radius:26px;color:#fff;background:radial-gradient(circle at 82% 35%,#f4c93f55,transparent 45%),linear-gradient(120deg,var(--red2),var(--deep));border:4px solid var(--yellow);box-shadow:0 18px 34px #7c121244;overflow:hidden}
 .upsell small{font:900 12px Lato,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--yellow)}
@@ -246,6 +246,25 @@ footer{background:var(--sparkle),linear-gradient(180deg,#3a0a12,#1c0509);box-sha
 
 .phead .ttl .pre{display:block;margin-bottom:4px;font-size:.6em;color:#f3dcc4}
 @media (max-width:640px){#upWorth{display:inline-block;margin:0 .1em;font-size:1.5em}.phead .ttl{padding-inline:30px}}
+
+/* Referral rule callout */
+.rule{display:inline-block;max-width:640px;margin:14px auto 0!important;padding:10px 16px;border-radius:12px;background:#fff7d9;border:1.5px solid #d4ae4f;color:var(--wine)!important;font-weight:900!important;font-size:15px!important;line-height:1.45}
+.rule::before{content:"★ ";color:#b8862a}
+.rule.dark{display:block;margin:0 0 22px!important;background:#ffffff12;border-color:#e2bd5a88;color:#fff3d6!important}
+.rule.dark::before{color:#e2bd5a}
+/* Unboosted podium spots stay compact so #1 is always the tallest */
+.pod.filler .blk .chn b{font-size:clamp(26px,3vw,34px)}
+.pod.filler .blk h3{font-size:18px}
+@media (max-width:640px){.rule{font-size:13px!important;padding:8px 12px}.pod.filler .blk .chn b{font-size:20px}.pod.filler .blk h3{font-size:13px}}
+
+.pod.filler .blk{padding-top:8px;padding-bottom:10px}
+.pod.filler .blk .rk{font-size:32px}
+.pod.filler .blk .chn{display:flex;align-items:baseline;justify-content:center;gap:5px;margin-top:2px}
+.pod.filler .blk .chn b{display:inline;font-size:26px}
+.pod.filler .blk .chn span{display:inline;margin:0}
+.pod.filler .unlock{margin-top:6px}
+.p2 .blk{min-height:168px}.p3 .blk{min-height:0}
+@media (max-width:640px){.p2 .blk{min-height:138px}.pod.filler .blk .rk{font-size:24px}.pod.filler .blk .chn b{font-size:18px}}
 </style></head><body>
 <header class="hero" id="top"><div class="corner a"></div><div class="corner b"></div><div class="snow"></div>
 <div class="wrap"><nav class="nav"><a class="brand" href="#top"><img data-i="nova" alt="NOVA"><span>Christmas MEGA Giveaway</span></a><a class="l" href="#prizes">Prizes</a><a class="l" href="#how">How It Works</a><a class="l" href="#leaderboard">Leaderboard</a><a class="l" href="#nova">About NOVA</a></nav>
@@ -301,14 +320,14 @@ footer{background:var(--sparkle),linear-gradient(180deg,#3a0a12,#1c0509);box-sha
 <section class="fp"><div class="wrap"><h2 class="ttl">Feature Prizes</h2><p class="lead">Twenty prizes, drawn from smallest to biggest.</p><div class="grid" id="grid"></div></div></section>
 <section id="how"><div class="wrap"><h2 class="ttl">How It Works</h2><p class="lead">Three simple steps to join the fun.</p><div class="how"><div class="h"><img data-i="g5" alt="Festive ornaments"><div><h3>1. Do Your Review</h3><p>Complete your End of Year Review 2026 for 1 entry.</p></div></div><div class="h"><img data-i="g3" alt="Wrapped gifts"><div><h3>2. Refer Someone New</h3><p>Earn 1 more entry each time someone you refer completes their review.</p></div></div><div class="h"><img data-i="hero" alt="Gifts on a Christmas tree"><div><h3>3. Climb to the Top</h3><p>Rank #1, #2 or #3 on 23 Dec for boosted grand prize chances.</p></div></div></div></div></section>
 <section class="tsec" id="join"><div class="wrap"><div class="timer"><div class="hgw"><svg class="hg" viewBox="0 0 120 170" role="img" aria-label="Hourglass counting down"><defs><clipPath id="hgt"><rect id="sandT" x="0" y="40" width="120" height="45"/></clipPath><clipPath id="hgb"><rect id="sandB" x="0" y="150" width="120" height="0"/></clipPath><linearGradient id="hgg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f7de8a"/><stop offset=".5" stop-color="#d9a72f"/><stop offset="1" stop-color="#f7de8a"/></linearGradient></defs><path d="M24 16h72v26c0 18-26 28-30 43 4 15 30 25 30 43v26H24v-26c0-18 26-28 30-43-4-15-30-25-30-43z" fill="#fff" fill-opacity=".14" stroke="#fff" stroke-opacity=".8" stroke-width="3"/><path clip-path="url(#hgt)" d="M28 18h64v24c0 16-25 26-31 42h-2c-6-16-31-26-31-42z" fill="#f4c93f"/><path clip-path="url(#hgb)" d="M28 152v-24c0-14 20-22 32-30 12 8 32 16 32 30v24z" fill="#f4c93f"/><path class="grain" d="M60 84v66" stroke="#f4c93f" stroke-width="3" stroke-dasharray="3 7"/><rect x="14" y="4" width="92" height="13" rx="6" fill="url(#hgg)"/><rect x="14" y="153" width="92" height="13" rx="6" fill="url(#hgg)"/></svg></div><div class="tt"><h2>Time Left to Join</h2><p>Entries close 23 Dec, 11:59pm. Do your review and refer friends before then.</p></div><div class="big" aria-label="Time left in the campaign"><div><b id="tD">0</b><span>Days</span></div><div><b id="tH">00</b><span>Hours</span></div><div><b id="tM">00</b><span>Mins</span></div><div><b id="tS">00</b><span>Secs</span></div></div></div></div></section>
-<div class="wrap"><div class="boost"><h2>Top 3 Referrers Get Extra Chances!</h2><div class="tiers"><div class="tier t1"><span>1st Place</span><b>×20</b><small>chances</small></div><div class="tier"><span>2nd Place</span><b>×15</b><small>chances</small></div><div class="tier"><span>3rd Place</span><b>×10</b><small>chances</small></div></div><p>Your entries are multiplied for the 3 grand prize draws. Rankings lock on 23 Dec.</p></div></div>
+<div class="wrap"><div class="boost"><h2>Top 3 Referrers Get Extra Chances!</h2><div class="tiers"><div class="tier t1"><span>1st Place</span><b>×20</b><small>chances</small></div><div class="tier"><span>2nd Place</span><b>×15</b><small>chances</small></div><div class="tier"><span>3rd Place</span><b>×10</b><small>chances</small></div></div><p>Your entries are multiplied for the 3 grand prize draws. Rankings lock on 23 Dec.</p><p class="rule">Only for referrers: you need at least 1 successful referral to get ×20, ×15 or ×10. Without a referral, you get no extra chances.</p></div></div>
 <div class="wrap promos" style="margin-top:34px">
 <div class="promo" style="--c:#c9303a;background-image:var(--g2)"><small>Top Referrer</small><h3>×20 Chances</h3><a class="btn y" href="#leaderboard">Climb Now</a></div>
 <div class="promo" style="--c:#2f6658;background-image:var(--g3)"><small>Every Week</small><h3>New Winners</h3><a class="btn y" href="#draws">See Dates</a></div>
 <div class="promo" style="--c:#b8891b;background-image:var(--g4)"><small>No Limit</small><h3>Refer More</h3><a class="btn r" href="#how">How It Works</a></div></div>
 <div class="sale"><div class="snow"></div><div class="wrap"><span class="tag">Next Draw</span><div class="dome"><h2 id="nextTitle"></h2><p id="nextSub"></p><div class="clock" id="clock"><div><b id="cD">0</b><span>Days</span></div><div><b id="cH">0</b><span>Hours</span></div><div><b id="cM">0</b><span>Mins</span></div><div><b id="cS">0</b><span>Secs</span></div></div><a class="btn y" href="#leaderboard">Check Your Rank</a></div></div></div>
 <div class="wrap sched" id="draws"></div>
-<section class="lb" id="leaderboard" style="margin-top:56px"><div class="wrap"><h2 class="ttl">Who's Bringing the Most Cheer?</h2><p class="lead">Live rankings. The top three on 23 Dec get ×20, ×15 and ×10 for the grand prize draws.</p><div class="pods" id="podium"></div><div class="bg"><div class="box" id="list"></div><div class="box"><h3>Find Your Name</h3><input id="q" type="search" placeholder="Type your first name" aria-label="Find your name" autocomplete="off"><div id="res"><p class="note">See your entries, rank and next goal.</p></div></div></div><p class="note"><span id="updated">Connecting…</span> Chances are estimates and change as entries come in.</p></div></section>
+<section class="lb" id="leaderboard" style="margin-top:56px"><div class="wrap"><h2 class="ttl">Who's Bringing the Most Cheer?</h2><p class="lead">Live rankings. The top three on 23 Dec get ×20, ×15 and ×10 for the grand prize draws.</p><p class="rule dark">Boosts need at least 1 successful referral. Podium spots without a referral show ×1 and get no extra chances.</p><div class="pods" id="podium"></div><div class="bg"><div class="box" id="list"></div><div class="box"><h3>Find Your Name</h3><input id="q" type="search" placeholder="Type your first name" aria-label="Find your name" autocomplete="off"><div id="res"><p class="note">See your entries, rank and next goal.</p></div></div></div><p class="note"><span id="updated">Connecting…</span> Chances are estimates and change as entries come in.</p></div></section>
 <section class="nv" id="nova"><div class="wrap"><div class="nvtop"><div class="nvlogo"><img data-i="nova" alt="NOVA logo"></div><div><div class="nk">Who We Are</div><h2>Make What You Have Work Harder</h2><p>NOVA is a financial advisory team. We show you where you stand, then make what you already have work harder before suggesting anything new.</p><p class="nm"><b>Why NOVA?</b> It means "new" in Latin. In the sky, a nova is a star that suddenly shines brighter. We're a young team and a new star rising, here to build something that lasts.</p></div></div>
 <div class="vis"><span>Our Vision</span><p>Team NOVA walks with Singapore families through every life stage, from a first salary to retirement and legacy. We give clear advice, recommend only what you need, and stay for the long run.</p></div>
 <h3 class="nh">Have a Money Question? Start With Us</h3><div class="topics"><div><b>Savings and Investments</b><p>Get a clear view of how your money is working.</p></div><div><b>Policies and Protection</b><p>Spot gaps and overlaps in what you already have.</p></div><div><b>Retirement and CPF</b><p>Know where you stand and what your plan needs.</p></div><div><b>Parents and Children</b><p>Plan for yourself while caring for your family.</p></div><div><b>Graduates and Young Families</b><p>Start right, without overbuying.</p></div><div><b>Anything Else on Finances</b><p>If it's about money, it's a good place to start.</p></div></div>
@@ -316,7 +335,7 @@ footer{background:var(--sparkle),linear-gradient(180deg,#3a0a12,#1c0509);box-sha
 <section id="terms" style="padding-top:0"><div class="wrap"><h2 class="ttl" style="font-size:34px">Key Terms</h2>
 <details><summary>Who can join?</summary><p>Anyone who completes a review or refers someone who does. It's free, and no product purchase is needed.</p></details>
 <details><summary>What counts as a referral?</summary><p>The person must be new to the adviser and not already a client. Their review must be completed and verified by 23 Dec, 11:59pm.</p></details>
-<details><summary>How do the draws work?</summary><p>Each entry is 1 chance for prizes 4 to 20. For prizes 1 to 3 only, the top three referrers' entries are multiplied by 20, 15 and 10. Ties share the same multiplier.</p></details>
+<details><summary>How do the draws work?</summary><p>Each entry is 1 chance for prizes 4 to 20. For prizes 1 to 3 only, the top three referrers' entries are multiplied by 20, 15 and 10. You need at least 1 successful referral to get a boost; without one, you get no extra chances. Ties share the same multiplier.</p></details>
 <details><summary>How many prizes can I win?</summary><p>Up to 2: one from prizes 4 to 20, and one from prizes 1 to 3.</p></details>
 <details><summary>Is my information public?</summary><p>Only your masked name, entries and rank. Phone numbers and referred names are never shown.</p></details><p class="note" id="tnc"></p></div></section>
 </main>
